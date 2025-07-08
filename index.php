@@ -1,23 +1,35 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <?php
-        include'header.php';
-    ?>
-        <h2>ยินดีต้อนรับเข้าสู่เว็บไซต์ของ Master_Jo</h2>
-        <p>จงมอบสิ่งล้ำค่าของเจ้ามา</p>
-        <div id="aaa">
-        ไมงั้น นายกอยู่ต่อ
-        <div>
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <?php
+    include 'header.php';
+  ?>
 
-        <a href="#" class="btn">เงิน</a>
-        <a href="#" class="reg">ใจ</a>
+   <h2>Welcome to Website</h2>
+   <?php 
+   if(isset($_SESSION['Email'])){
+ echo"$_SESSION[Email]"; 
+   }
+  ?>
+  
+   <p class="content"> ยินดีต้อนรับเข้าสู่เว็บไซต์ </p>
+   <div id="aaa">
+      โดย Master_Jo
+  </div>
 
-    <body>
-    </html>
+  <a href="#" class="btn">เข้าสู่ระบบ</a>
+  <a href="#" class="reg">สมัครสมาชิก</a>
+
+</body>
+</html>
+
+  

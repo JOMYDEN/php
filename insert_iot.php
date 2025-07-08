@@ -1,7 +1,6 @@
 <?php
-include 'connect.php';
+    include 'connect.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $zone = $_POST['zone'];
     $temp = $_POST['temp'];
     $hum = $_POST['hum'];
@@ -14,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-}
 
-$conn->close();
+    $conn->close();
 ?>

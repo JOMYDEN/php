@@ -1,13 +1,13 @@
 <?php
     include 'connect.php';
 
-    $ID = $_POST['ID'];
-    $NAME = $_POST['NAME'];     
-    $EMAIL = $_POST['EMAIL'];
-    $USERNAME = $_POST['USERNAME'];
-    $PASSWORD = $_POST['PASSWORD'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $sql = "INSERT INTO tbl_user (ID,NAME,EMAIL,USERNAME,PASSWORD) VALUES ('$ID', '$NAME', '$EMAIL', '$USERNAME', '$PASSWORD')";  
+    $sql = "INSERT INTO tbl_users (Name, Email, Username, Password) 
+            VALUES ('$name', '$email', '$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
